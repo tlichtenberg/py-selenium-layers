@@ -274,7 +274,8 @@ class WebLib:
     def select_window(self, identifier):
         self.sel.select_window(identifier)
         
-    def get_attribute(self, locator):
+    def get_attribute(self, locator, attribute='value', timeout=20):
+        # webdriverlib uses the attribute and timeout parameters
         return self.sel.get_attribute(locator)
     
     def close(self):
