@@ -363,7 +363,7 @@ class WebDriverLib:
                 self.sel.switch_to_window(handles[count])
             count = count + 1
         
-    def get_attribute(self, locator, timeout=20):
+    def get_attribute(self, locator, attribute, timeout=20):
         ''' finds the attribute 'value' '
             needs to be fixed for attributes in general, 
             but xpath= parsing would have to calculate based on that
@@ -376,7 +376,7 @@ class WebDriverLib:
             element = self.sel.find_element_by_xpath(locator)
         
         if element != None:
-            return element.get_attribute('value')
+            return element.get_attribute(attribute)
         else:
             return ''
     
