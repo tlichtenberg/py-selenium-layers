@@ -60,7 +60,7 @@ class WebDriverLib:
                     self.dc['version'] = "3"
                     self.dc['platform'] = 'WINDOWS'
                 else:
-                    self.dc['version'] = "13"
+                    self.dc['version'] = ""
                     self.dc['platform'] = 'WINDOWS'
                 self.sel = webdriver.Remote(str(remote_url), self.dc, browser_profile=profile)            
             elif self.browser.find("googlechrome") >= 0:
@@ -81,7 +81,7 @@ class WebDriverLib:
                 elif self.browser == "*ie9":
                     self.dc['version'] = "9"
                 else: # default
-                    self.dc['version'] = "9"
+                    self.dc['version'] = ""
                 self.sel = webdriver.Remote(str(remote_url), self.dc)  
             else: # default to IE
                 self.dc = DesiredCapabilities.INTERNETEXPLORER
